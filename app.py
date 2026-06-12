@@ -1,0 +1,15 @@
+import streamlit as st
+
+st.title("Simple Streamlit App")
+
+name = st.text_input("Enter your name")
+
+if name:
+    st.write(f"Hello, {name}! 👋")
+
+age = st.slider("Select your age", min_value=0, max_value=100, value=25)
+st.write(f"Selected age: {age}")
+
+if st.button("Celebrate"):
+    st.balloons()
+    st.success("🎉 Celebration time")
